@@ -3,20 +3,32 @@ import "./App.css"
 import Header from "./components/Header"
 import Main from "./components/Main"
 import CollapsibleContainer from "./components/CollapsibleContainer"
+import DishCard from "./components/DishCard"
+import Hotdog from "./assets/hotdog.jpg"
+import Milk from "./assets/milk.png"
 
 var headerTitle = "KALORI-KOLLEN"
-var containerTitle1 = "Frukost"
-var containerTitle2 = "Lunch"
-var containerTitle3 = "Middag"
+var titleBreakfast = "Frukost"
+var titleLunch = "Lunch"
+var titleDinner = "Middag"
 
 function App() {
   return <>
     <div className="bg-emerald-600 min-h-screen flex flex-col">
       <Header title={headerTitle} />
       <Main>
-        <CollapsibleContainer title={containerTitle1} />
-        <CollapsibleContainer title={containerTitle2} />
-        <CollapsibleContainer title={containerTitle3} />
+        <CollapsibleContainer title={titleBreakfast}>
+          <DishCard title="Hotdog" imageSrc={Hotdog} />
+          <DishCard title="Hotdog" imageSrc={Hotdog} />
+          <DishCard title="Hotdog" imageSrc={Hotdog} />
+          <DishCard title="Hotdog" imageSrc={Hotdog} />
+          <DishCard title="Hotdog" imageSrc={Hotdog} />
+          <DishCard title="Hotdog" imageSrc={Hotdog} />
+          <DishCard title="Hotdog" imageSrc={Hotdog} />
+          <DishCard title="Milk" imageSrc={Milk} />
+        </CollapsibleContainer>
+        <CollapsibleContainer title={titleLunch}></CollapsibleContainer>
+        <CollapsibleContainer title={titleDinner}></CollapsibleContainer>
       </Main>
     </div>
   </>

@@ -13,7 +13,7 @@ const CollapsibleContainer: React.FC<CollapsibleContainerProps> = ({ title, chil
     };
 
     return (
-    <div className="bg-white shadow-lg rounded-xl mb-4 max-w-screen-xl mx-auto overflow-hidden">
+    <div className="bg-emerald-100 shadow-lg rounded-xl mb-4 max-w-screen-xl mx-auto overflow-hidden">
       <div
         className="flex justify-between items-center px-4 py-1 bg-emerald-600 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
@@ -25,7 +25,7 @@ const CollapsibleContainer: React.FC<CollapsibleContainerProps> = ({ title, chil
       </div>
 
       {isOpen && (
-        <div className="p-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div className="p-4 flex flex-wrap gap-2 justify-start">
           {children}
         </div>
       )}
