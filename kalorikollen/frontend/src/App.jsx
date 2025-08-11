@@ -18,7 +18,10 @@ function App() {
       <Header title={headerTitle} />
       <Main>
         <CollapsibleContainer title={titleBreakfast}>
-          <DishCard title="Hotdog" imageSrc={Hotdog} />
+          <DishCard title="Korv med bröd"
+            imageSrc={Hotdog}
+            accessories={["Ketchup", "Senap", "Rostad lök"]}
+            onAccessoriesChange={(selected) => console.log("Valda tillbehör:", selected)} />
           <DishCard title="Hotdog" imageSrc={Hotdog} />
           <DishCard title="Hotdog" imageSrc={Hotdog} />
           <DishCard title="Hotdog" imageSrc={Hotdog} />
